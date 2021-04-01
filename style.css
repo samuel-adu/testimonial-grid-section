@@ -1,0 +1,127 @@
+
+* {
+  box-sizing: border-box;
+  border: 0;
+  padding: 0;
+}
+
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+  background: var(--light-grayish-blue);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* .user-name,
+.user-title {
+  float: right;
+} */
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+div {
+  padding: 2rem;
+  margin: 2rem;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.dan {
+  background: url(images/bg-pattern-quotation.svg) no-repeat top right 3rem var(--moderate-violet);
+  color: var(--white);
+}
+
+.jon {
+  background: var(--very-dark-grayish-blue);
+  color: var(--white);
+}
+
+.jean, .kira {
+  background: var(--white);
+  color: var(--very-dark-grayish-blue);
+}
+
+.pat {
+  background: var(--very-dark-blackish-blue);
+  color: var(--white);
+}
+
+.bold-text {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.user-title {
+  opacity: 50%;
+}
+
+.quoted-text {
+  opacity: 70%;
+}
+
+/* .flex {
+  display: flex;
+  justify-content: left;
+} */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 575px) {
+  main {
+    display: grid;
+    /* height: 100vh; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+
+  div {
+    margin: 0;
+  }
+
+  .dan {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .jon {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .kira {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .jean {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .pat {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}
