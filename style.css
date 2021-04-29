@@ -21,25 +21,28 @@ body {
   font-weight: 500;
 }
 
-/* .user-name,
-.user-title {
-  float: right;
-} */
-
 main {
+  display: grid;
+  grid-gap: 1.5rem;
   width: 90%;
   margin: 0 auto;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
-div {
+.card {
   padding: 2rem;
-  margin: 2rem;
+  /* margin: 2rem; */
 }
 
-img {
+.row {
+  display: flex;
+}
+
+.avatar {
+  /* max-width: 100%; */
   border-radius: 50%;
+  margin-right: 1rem;
 }
 
 .dan {
@@ -91,11 +94,9 @@ img {
 
 @media (min-width: 575px) {
   main {
-    display: grid;
     /* height: 100vh; */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1.5rem;
   }
 
   div {
